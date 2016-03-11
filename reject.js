@@ -1,6 +1,6 @@
 var promise = new Promise(function(fulfill, reject) {
     setTimeout(function() {
-var error  = new Error("REJECTED!");
+var error  = new Error("REJECTED");
         reject(error);
     }, 300);
 })

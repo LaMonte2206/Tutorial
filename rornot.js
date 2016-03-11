@@ -1,10 +1,10 @@
-var promise = new Promise(function(fulfill, reject) {
-    setTimeout(function() { 
+var promise = new Promise(function(fulfill, reject) { 
         fulfill("I FIRED");
-    }, 300);
-}).then(function(success) {
-    console.log(success);
-}, function(err) {
-    console.log(err);
+        var error = new Error ("I DID NOT FIRE");
+        reject(error);
 });
-
+  
+  function onReject (e) {
+      onsole.log(e.message);
+  };
+promise.then(console.log, onReject);
